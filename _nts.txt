@@ -1,0 +1,10 @@
+GOAL -> A simple layout that a designer can work with. 
+
+hardcoded data (see GG sheet)
+ref. Todo app from Meteor. 
+3 seasons, various entries for each. 
+
+slide menu left for the seasons within this list
+Later, up the tree to main menu within the menu bar
+
+gg_lay
