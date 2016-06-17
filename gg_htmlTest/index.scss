@@ -1,0 +1,143 @@
+//-- VARIABLES --//
+$lg-screen:  960;
+$med-screen: 768;
+$sm-screen:  640;
+
+$circle-size: 4rem;
+
+//-- MIXINS --//
+@mixin forLargeScreens($media) {
+	@media (min-width: $media/16+em) { @content; }
+}
+
+@mixin fontFace($font-family, $file-path) {
+    @font-face {
+        font: {
+            family: $font-family;
+            weight: normal;
+            style:  normal;
+        }
+      //for Modern Browsers
+        src: url('#{$file-path}.woff') format('woff');
+    }
+}
+
+//-- INCLUDES --//
+// @include fontFace(gotham-med, '../fonts/gotham-med');
+
+
+body {
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	margin: 0 auto;
+}
+
+h1 {
+	color: darkgrey;
+}
+
+h2 {
+	color: grey;
+}
+
+p {
+	color: black;
+}
+
+.episode {
+	// background-color: pink;
+	max-width: 95%;
+	@include forLargeScreens($med-screen) {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	@include forLargeScreens($med-screen) {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+	.ref-wrapper {
+		display: flex;
+		flex-direction: row;
+
+		.ref-marker {
+			color: red;
+			width: $circle-size;
+		}
+		.ref {
+			display: flex;
+			flex-direction: column;
+
+			.ref-headline {
+				display: flex;
+				padding-left: 1rem;		
+				align-items: center;
+
+				.person-thumb {
+					img {
+						width: $circle-size;
+						@include forLargeScreens($med-screen) {
+							width: 6rem;
+						}
+						float: left;
+						border-radius: 50%;
+						border: double 8px white;
+					}
+				}	
+				.ref-quote {
+					padding-left: 1rem;
+					font-size: 1.5rem;
+					@include forLargeScreens($med-screen) {
+						font-size: 2em;
+					}
+				}			
+			}
+		
+			.details-wrapper {
+				// background-color: rgba(0, 0, 122, 0.4);
+	
+				display: flex;
+				flex-direction: column;
+				padding-left: 2.5 * $circle-size + 1rem;
+
+				@include forLargeScreens($med-screen) {
+					padding-right: 2rem;
+					padding-left: 3 * $circle-size + 1rem;
+				}
+
+				.screengrab {
+					img {
+						max-width: 500px;
+					}
+				}
+					
+				.ref-detail {
+
+					.ref-thumb {
+						img {
+							max-width: 150px;
+							height: auto;
+							float: left;
+							padding-right: 1.5em;
+						}
+					}
+					
+					& > p {
+						margin-top: 0;
+					}
+
+					.fa-circle {
+						color: lightgrey;
+					}
+					.fa-fix {
+						padding-top: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+

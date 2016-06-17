@@ -1,0 +1,119 @@
+body {
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  margin: 0 auto;
+}
+
+h1 {
+  color: darkgrey;
+}
+
+h2 {
+  color: grey;
+}
+
+p {
+  color: black;
+}
+
+.episode {
+  max-width: 95%;
+}
+
+@media (min-width: 48em) {
+  .episode {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 48em) {
+  .episode {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.episode .ref-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.episode .ref-wrapper .ref-marker {
+  color: red;
+  width: 4rem;
+}
+
+.episode .ref-wrapper .ref {
+  display: flex;
+  flex-direction: column;
+}
+
+.episode .ref-wrapper .ref .ref-headline {
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+}
+
+.episode .ref-wrapper .ref .ref-headline .person-thumb img {
+  width: 4rem;
+  float: left;
+  border-radius: 50%;
+  border: double 8px white;
+}
+
+@media (min-width: 48em) {
+  .episode .ref-wrapper .ref .ref-headline .person-thumb img {
+    width: 6rem;
+  }
+}
+
+.episode .ref-wrapper .ref .ref-headline .ref-quote {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 48em) {
+  .episode .ref-wrapper .ref .ref-headline .ref-quote {
+    font-size: 2em;
+  }
+}
+
+.episode .ref-wrapper .ref .details-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 11rem;
+}
+
+@media (min-width: 48em) {
+  .episode .ref-wrapper .ref .details-wrapper {
+    padding-right: 2rem;
+    padding-left: 13rem;
+  }
+}
+
+.episode .ref-wrapper .ref .details-wrapper .screengrab img {
+  max-width: 500px;
+}
+
+.episode .ref-wrapper .ref .details-wrapper .ref-detail .ref-thumb img {
+  max-width: 150px;
+  height: auto;
+  float: left;
+  padding-right: 1.5em;
+}
+
+.episode .ref-wrapper .ref .details-wrapper .ref-detail > p {
+  margin-top: 0;
+}
+
+.episode .ref-wrapper .ref .details-wrapper .ref-detail .fa-circle {
+  color: lightgrey;
+}
+
+.episode .ref-wrapper .ref .details-wrapper .ref-detail .fa-fix {
+  padding-top: 2px;
+}
+
+.hide {
+  display: none;
+}
